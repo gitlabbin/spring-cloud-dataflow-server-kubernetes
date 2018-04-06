@@ -69,11 +69,7 @@
 						  <volume>/tmp</volume>
 						</volumes>
 						<entryPoint>
-						  <exec>
-							<arg>java</arg>
-							<arg>-jar</arg>
-							<arg>/maven/spring-cloud-dataflow-server-kubernetes.jar</arg>
-						  </exec>
+							<shell>$JAVA_HOME/bin/java $JAVA_OPTS -jar /maven/spring-cloud-dataflow-server-kubernetes.jar ${*}</shell>
 						</entryPoint>
 						<assembly>
 						  <descriptor>assembly.xml</descriptor>
